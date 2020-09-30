@@ -19,34 +19,51 @@ with open(electFilePath) as file:
     if header != None: 
         for row in csv_reader: 
             voteID = row[0]
-            county = row[1]
-            candidate = row[2]
-                
+            county = row[1]  
+            candidate = row[2]  
+    # append data to list  
             totalVote.append(voteID) 
             vCounty.append(county)
             vCandidate.append(candidate)
-
-print ("Election Results\n")
-print ("-------------------------\n")
-
+            
+print ("Election Results")
+print ("-------------------------")
 #   * The total number of votes cast
 cntVote = len(totalVote)
-print(f"Total Votes: {cntVote}\n")
-print ("-------------------------\n")
+print(f"Total Votes: {cntVote}")
+print ("-------------------------")
+
+def uniqueRow(vCandidate,totalVote): 
+  
+    # intilize a null list 
+    Candidate = [] 
+    Vote = []
+    
+    for i in vCandidate:
+         Candidate.append(i)
+    for i in totalVote:
+         Vote.append(i)
+    
+#set dictionay keys and values
+    dictList = dict(zip(Candidate, Vote))
+    key_list = list(dictList.keys()) 
+    val_list = list(dictList.values())
+    
 # A complete list of candidates who received votes 
 # The percentage of votes each candidate won
 # The total number of votes each candidate won
-
-print(f"Khan: \n")
-print(f"Khan: \n")
-print(f"Khan: \n")
-print(f"Khan: \n")
-print ("-------------------------\n")
-
+    
+    print(f"Khan:  ")
+    print(f"Correy: ")
+    print(f"Li: ")
+    print(f"O'Tooley: ")
+    print ("-------------------------")
+    
 #   * The winner of the election based on popular vote.
-print(f"Winner:\n")
+    print(f"Winner:")
 
-
+uniqueRow(vCandidate,totalVote) 
+ 
 # * As an example, your analysis should look similar to the one below:
 
 #   ```text

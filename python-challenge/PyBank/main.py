@@ -44,7 +44,8 @@ def avgChange(lst_data,lst_mo):
      vChange = round(sum(lstChange)/len(lstChange),2)
 
 #   * The average of the changes in "Profit/Losses" over the entire period   
-     print(f"Average  Change: ${vChange}")
+     print(f"Average Change: ${vChange}")
+     
      lstMonths = []
      for i in lst_mo:
          lstMonths.append(i)
@@ -66,6 +67,7 @@ def avgChange(lst_data,lst_mo):
      print(f"Greatest Decrease in Profits: {minkeyDate} (${minDecrease})")
      
     #writeOutput = open("output.txt", "w")
+     writeOutput.write(f"Average Change: ${vChange}\n")
      writeOutput.write(f"Greatest Increase in Profits: {maxkeyDate} (${maxIncrease})\n")
      writeOutput.write(f"Greatest Decrease in Profits: {minkeyDate} (${minDecrease})\n")
      
@@ -80,7 +82,7 @@ avgChange(vTotal,vMonths)
 #   ----------------------------
 #   Total Months: 86
 #   Total: $38382578
-#   Average  Change: $-2315.12
+#   Average  Change:Average  Change: $-2315.12
 #   Greatest Increase in Profits: Feb-2012 ($1926159)
 #   Greatest Decrease in Profits: Sep-2013 ($-2196167)
 #   ```
