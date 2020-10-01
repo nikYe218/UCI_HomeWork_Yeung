@@ -1,4 +1,3 @@
-# * Your task is to create a Python script that analyzes the records to calculate each of the following:
 import os
 import csv
 
@@ -31,7 +30,7 @@ print(f"Total Months: {cntMonth}")
 Total = sum(vTotal)
 print(f"Total: ${Total}")
 
-writeOutput = open("output.txt", "w")
+writeOutput = open("analysis\output.txt", "w")
 writeOutput.write("Financial Analysis \n" )
 writeOutput.write("----------------------------------------\n")
 writeOutput.write(f"Total Months: {cntMonth} \n")
