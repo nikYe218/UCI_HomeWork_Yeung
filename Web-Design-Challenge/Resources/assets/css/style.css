@@ -1,0 +1,121 @@
+
+h1 {
+    font-family:  Times, Times New Roman, Georgia, serif;
+    font-size:24px; 
+    color: lightseagreen;
+    font-weight: bold;
+}
+h2 {
+    font-family:  Times, Times New Roman, Georgia, serif;
+    font-size:20px; 
+    color: lightseagreen;
+    font-weight: bold;  
+
+}
+h3 {
+    font-family:  Times, Times New Roman, Georgia, serif;
+    font-size:14px; 
+    color: lightseagreen;
+    font-weight: bold; 
+    text-align: center;
+
+}
+
+img {
+    max-width:100%;
+
+}
+
+.btnbg {
+
+    background-color:DarkCyan; 
+    font-size:20px; 
+    font-weight: bold; 
+    max-width: 100px;
+
+}
+
+body {
+    background-color:#ebebeb;
+    width: 1200px;
+    font-size:12px;
+    font-family: Times New Roman;
+}
+.nav{
+    width: 100%;
+
+}
+.divDrop{
+    font-size: 10pt;
+    text-align: left;
+
+
+}
+.dropdown-menu { 
+    right: 0px;
+    left: auto;
+    font-size: 12px;
+    line-height: 1;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+p{
+      color:SlateGray ;
+      text-align: left;
+      font-size: 12px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+
+.divSum {
+    align-content: left;
+    margin-left: 135px;
+    background-color: white;
+  }
+.divlgImg{
+    width:"500";
+    height:"400";
+    align-items: center;
+
+}
+
+.divVis {
+    align-content: center;
+    margin-left: 20px;
+    margin-right: 200px;
+    margin-bottom: 300px;
+    background-color: white;
+
+  }
+.divtbl {
+    align-content: center;
+    background-color: white;
+    z-index: 1;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+ 
+
+}
+
+.imgVis {
+height: 100px;
+width: 150px;
+background-color: white;
+    
+}
+.padImg
+ {
+  padding: 0%;
+  height: 100px;
+  width: 215px;
+ }
+.colColor{
+    color:SlateGray ;
+
+}
+td {
+    width: 10%;
+  }
+  
