@@ -111,7 +111,7 @@ def scrape_hemisphere():
     prsUrl =urlparse(f'{hemUrl}')
     mainHem_url = (f'{prsUrl.scheme}://{prsUrl.netloc}')
     mainHem_url=mainHem_url.replace(' ', '')
-    print(mainHem_url)
+    #print(mainHem_url)
     data=[]
 
     for h in hem_items :
@@ -139,6 +139,7 @@ def scrape_hemisphere():
         time.sleep(2)
         browser.visit(hemUrl)
     #browser.quit()
-    mars_data=data
+    mars_data["hemisphere_image"] = data
+    #mars_data= mars_data
     print(mars_data)
     return mars_data
