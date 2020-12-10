@@ -56,24 +56,24 @@ def scrape_featureimg():
     main_url = (f'{parseUrl.scheme}://{parseUrl.netloc}')
     main_url=main_url.replace(' ', '')
     
-    print(main_url)
+    #print(main_url)
     soup1 = BeautifulSoup(html, 'lxml')
     a_tag = soup1.find("article", {"class":"carousel_item"})
     
-    print(a_tag)
+    #print(a_tag)
     html = f'{a_tag}'
     soup = BeautifulSoup(html)
     div_style = soup.find('article')['style']
     style = cssutils.parseStyle(div_style)
     cur_url = style['background-image']
     cur_url=cur_url.replace('url(', '').replace(')', '')  
-    print(f'{main_url}{cur_url}')
+    #print(f'{main_url}{cur_url}')
     
     featured_image_url = f'{main_url}{cur_url}'
     
     mars_data['featured_image_url']=featured_image_url
 
-    print(mars_data)
+    #print(mars_data)
     
     browser.quit()
     
@@ -89,7 +89,7 @@ def scrape_facts():
     df.columns=['Description', 'Mars']
     new_df = df.set_index('Description')
     html_table = new_df.to_html(header=True)
-    print(html_table)
+    # print(html_table)
 
     # add to dicttionary
     mars_data['table']=html_table
@@ -138,8 +138,8 @@ def scrape_hemisphere():
         data.append(dicts)
         time.sleep(2)
         browser.visit(hemUrl)
-    #browser.quit()
+    browser.quit()
     mars_data["hemisphere_image"] = data
     #mars_data= mars_data
-    print(mars_data)
+    #print(mars_data)
     return mars_data
