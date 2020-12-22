@@ -28,6 +28,7 @@ window.onload = function() {
     document.getElementById("shape").value ="";
     }
 
+// table data to web
 function tblData(tableData){
     //<tbody></tbody>
     var tbody = d3.select("tbody");
@@ -48,15 +49,12 @@ function tblData(tableData){
 // button click to filter data by datetime
 btn.on("click", function(){
      
-    var inputValue = inputTxt.property("value");
+    var inputValue = inputDt.property("value");
     var filterData = tableData.filter(function(event){
         if(inputValue !== null && inputValue !== ""  ){
-          
             return event.datetime === inputValue.trim();};
         return event.datetime;
         });
     tblData(filterData);
 
 });
-
-

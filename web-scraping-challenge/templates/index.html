@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -105,4 +106,113 @@
   
   </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission to Mars</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: white;
+      }
+
+      table  {
+          font-family: 'Times New Roman';
+          border-collapse: collapse;
+          font-size: small;
+          border: 2px solid black;
+      } 
+
+      td,th{
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 5px;
+        font-size:  small;
+        border-left: solid 2px black;
+      }
+
+      tr:nth-child(odd) {
+        background-color:#f2f2f2;
+
+      }
+      tr:nth-last-child(2){
+        background-color:white;
+   
+      }
+      
+    </style>
+  </head>
+
+  <!---Container -->
+  <body>
+    <div class="container">
+        <!-- Add Image URL -->
+        <div class="jumbotron text-center text-black" style="background-color: gray" style ="color: black"); background-size: 100%; height: 350px;">
+          <h1 class="display-4" style="color: white">Mission to Mars</h1>
+          <!-- Add Button mars_app -->
+          <a class="btn btn-lg text-white" style="background-color:#0d71aa; color: white" href="/scrape" role="button">Scrape New Data</a>
+        </div>
+      
+      <!-- Recent News -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="media">
+            <div class="media-body">
+              <h2 style="color: black"><b>Latest Mars News</b></h2>
+              <h4 class="media-heading" style="color: black"><b>{{mars_data.news_title}}</b></h4>
+              <h5 style="color: black"><p>{{mars_data.news_p}}</p></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Featured Image-->
+      <div class="row">
+        <div class="col-md-9">
+          <h3 style="color: black"><b>Featured Mars Image</b></h3>
+            <img src="{{mars_data.featured_image_url}}" class="img-responsive">
+        </div>
+         <!-- Facts Info -->
+          <div class="row">
+            <h5 style="color: black"><strong>Mars Facts</strong></h5>
+            <p class="col-md-12" style="color: black">
+              {{mars_data.table | safe}}
+            </p>
+          </div>
+        </div>
+      
+       <!-- Hemisphere -->
+      <div class="row" style="margin-top: 80px;">
+        <div class="page-header">
+          <h2 class="text-center" style="color: black"><b>Mars Hemispheres</b></h2>
+        </div>
+        {% for img in mars_data.hemisphere_image %}
+          <div class="col-md-6">
+            <div class="thumbnail">
+
+              <img src="{{img.img_url}}">
+
+              <div class="caption">
+
+                <h5><b>{{img.title}}</b></h5>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+
+    </div>
+  
+  </body>
+
+>>>>>>> 63fc71e1759cedd63bc59b733a52db92a192492e
   </html>
