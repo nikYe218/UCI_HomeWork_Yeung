@@ -55,6 +55,7 @@ btn.on("click", function(){
             return event.datetime === inputValue.trim();};
         return event.datetime;
         });
+        
     tblData(filterData);
 
 });
